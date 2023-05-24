@@ -12,7 +12,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Arrays;
 import paquete1.Calificacion;
-import paquete1.Profesor;
+import paquete1.Profesor2;
 
 public class ArchivoLectura {
 
@@ -85,7 +85,7 @@ public class ArchivoLectura {
                 // ["Tara Hernandez", "contratado"]
                 //        0                 1
                 
-                Profesor p = new Profesor(cadenaProfesor.get(0), 
+                Profesor2 p = new Profesor2(cadenaProfesor.get(0), 
                         cadenaProfesor.get(1));
                 
                 Calificacion cal = new Calificacion(nota, materia);

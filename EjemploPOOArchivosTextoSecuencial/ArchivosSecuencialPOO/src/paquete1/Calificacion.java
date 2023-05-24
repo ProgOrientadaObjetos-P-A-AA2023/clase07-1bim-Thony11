@@ -8,6 +8,7 @@ package paquete1;
 public class Calificacion{
 
     private double nota;
+    private double promedio;
     private String nombreMateria;
     private Profesor profesor;
 
@@ -28,6 +29,10 @@ public class Calificacion{
     public void establecerProfesor(Profesor n) {
         profesor = n;
     }
+    
+    public void calcularPromedio() {
+        promedio = nota / 3;
+    }
 
     public double obtenerNota() {
         return nota;
@@ -39,6 +44,10 @@ public class Calificacion{
     
     public Profesor obtenerProfesor() {
         return profesor;
+    }
+    
+    public double obtenerPromedio() {
+        return promedio;
     }
 
 }

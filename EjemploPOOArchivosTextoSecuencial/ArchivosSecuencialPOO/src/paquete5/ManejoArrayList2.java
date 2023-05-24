@@ -6,7 +6,7 @@
 package paquete5;
 
 import java.util.ArrayList;
-import paquete1.Profesor;
+import paquete1.Profesor2;
 
 /**
  *
@@ -15,11 +15,11 @@ import paquete1.Profesor;
 public class ManejoArrayList2 {
     public static void main(String[] args) {
         
-        Profesor prof1 = new Profesor("Joseph Jimenez", "facturado");
-        Profesor prof2 = new Profesor("David Jones", "nombramiento");
+        Profesor2 prof1 = new Profesor2("Joseph Jimenez", "facturado");
+        Profesor2 prof2 = new Profesor2("David Jones", "nombramiento");
         
         // Arreglo
-        Profesor [] profesores = new Profesor[2];
+        Profesor2 [] profesores = new Profesor2[2];
         profesores[0] = prof1;
         profesores[1] = prof2;
         
@@ -31,13 +31,13 @@ public class ManejoArrayList2 {
         System.out.println("-----------------------------");
         
         // ArrayList
-        ArrayList <Profesor> profesores2 = new ArrayList<>();
+        ArrayList <Profesor2> profesores2 = new ArrayList<>();
         profesores2.add(prof1); // 0
         profesores2.add(prof2); // 1
         
         // System.out.println(profesores2.get(1).obtenerTipo());
         
-        Profesor temporal = profesores2.get(0);
+        Profesor2 temporal = profesores2.get(0);
         System.out.println(temporal.obtenerTipo());
         
         /*
@@ -49,9 +49,9 @@ public class ManejoArrayList2 {
         
         System.out.println("-----------------------------");
         
-        Profesor prof3 = new Profesor("Melissa Gilbert", "contratado");
-        Profesor prof4 = new Profesor("Melissa J", "desconocido");
-        Profesor prof5 = new Profesor("Melissa M", "contratado");
+        Profesor2 prof3 = new Profesor2("Melissa Gilbert", "contratado");
+        Profesor2 prof4 = new Profesor2("Melissa J", "desconocido");
+        Profesor2 prof5 = new Profesor2("Melissa M", "contratado");
         
         profesores2.add(prof3);
         profesores2.add(prof4);

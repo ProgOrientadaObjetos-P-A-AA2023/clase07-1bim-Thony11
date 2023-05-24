@@ -11,14 +11,14 @@ import java.util.Scanner;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import paquete1.Profesor;
+import paquete1.Profesor2;
 
 public class ArchivoLectura {
 
     private Scanner entrada;
     private String nombreArchivo;
     private String rutaArchivo;
-    private ArrayList<Profesor> lista;
+    private ArrayList<Profesor2> lista;
 
     public ArchivoLectura(String n) {
         nombreArchivo = n;
@@ -69,7 +69,7 @@ public class ArchivoLectura {
                 ArrayList<String> linea_partes = new ArrayList<>(
                         Arrays.asList(linea.split(";")) // ["Tara Hernandez", "contratado"]
                 );
-                Profesor p = new Profesor(linea_partes.get(0), // Tara Hernandez
+                Profesor2 p = new Profesor2(linea_partes.get(0), // Tara Hernandez
                         linea_partes.get(1) // contratado
                 );
                 lista.add(p);
@@ -78,7 +78,7 @@ public class ArchivoLectura {
         }
     }
 
-    public ArrayList<Profesor> obtenerLista() {
+    public ArrayList<Profesor2> obtenerLista() {
 
         return lista;
     }
@@ -94,7 +94,7 @@ public class ArchivoLectura {
     public String toString() {
         String cadena = "Lista Profesores\n";
         for (int i = 0; i < obtenerLista().size(); i++) {
-            Profesor profTemporal = obtenerLista().get(i); // Obj. Profesor
+            Profesor2 profTemporal = obtenerLista().get(i); // Obj. Profesor
             cadena = String.format("%s(%d) %s %s\n", cadena,
                     i + 1,
                     profTemporal.obtenerNombre(), // obtenerLista().get(i).obtenerNombre(),

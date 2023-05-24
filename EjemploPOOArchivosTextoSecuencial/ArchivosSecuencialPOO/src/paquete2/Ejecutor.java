@@ -5,7 +5,7 @@
  */
 package paquete2;
 
-import paquete1.Profesor;
+import paquete1.Profesor2;
 
 public class Ejecutor {
 
@@ -14,9 +14,9 @@ public class Ejecutor {
         // nombre del archivo
         String nombreArchivo = "profesores2.txt";
         
-        Profesor profesor1 = new Profesor("Tara Hernandez", "contratado");
-        Profesor profesor2 = new Profesor("Gregory Walsh", "nombramiento");
-        Profesor profesor3 = new Profesor("Kevin Page", "nombramiento");
+        Profesor2 profesor1 = new Profesor2("Tara Hernandez", "contratado");
+        Profesor2 profesor2 = new Profesor2("Gregory Walsh", "nombramiento");
+        Profesor2 profesor3 = new Profesor2("Kevin Page", "nombramiento");
         
         
         ArchivoEscritura archivo = new ArchivoEscritura(nombreArchivo);
