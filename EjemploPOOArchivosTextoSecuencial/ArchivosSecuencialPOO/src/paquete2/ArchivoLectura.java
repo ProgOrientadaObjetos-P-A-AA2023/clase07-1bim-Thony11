@@ -11,14 +11,14 @@ import java.util.Scanner;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import paquete1.Profesor2;
+import paquete1.Profesor;
 
 public class ArchivoLectura {
 
     private Scanner entrada;
     private String nombreArchivo;
     private String rutaArchivo;
-    private ArrayList<Profesor2> lista;
+    private ArrayList<Profesor> lista;
 
     public ArchivoLectura(String n) {
         nombreArchivo = n;
@@ -63,13 +63,13 @@ public class ArchivoLectura {
 
         if (f.exists()) {
 
-            while (entrada.hasNext()) {
+            while (entrada.hasNext()) { // Entrada contiene toda información del archivo
                 String linea = entrada.nextLine(); // Tara Hernandez;contratado
 
                 ArrayList<String> linea_partes = new ArrayList<>(
                         Arrays.asList(linea.split(";")) // ["Tara Hernandez", "contratado"]
                 );
-                Profesor2 p = new Profesor2(linea_partes.get(0), // Tara Hernandez
+                Profesor p = new Profesor(linea_partes.get(0), // Tara Hernandez
                         linea_partes.get(1) // contratado
                 );
                 lista.add(p);
@@ -78,7 +78,7 @@ public class ArchivoLectura {
         }
     }
 
-    public ArrayList<Profesor2> obtenerLista() {
+    public ArrayList<Profesor> obtenerLista() {
 
         return lista;
     }
@@ -94,7 +94,7 @@ public class ArchivoLectura {
     public String toString() {
         String cadena = "Lista Profesores\n";
         for (int i = 0; i < obtenerLista().size(); i++) {
-            Profesor2 profTemporal = obtenerLista().get(i); // Obj. Profesor
+            Profesor profTemporal = obtenerLista().get(i); // Obj. Profesor
             cadena = String.format("%s(%d) %s %s\n", cadena,
                     i + 1,
                     profTemporal.obtenerNombre(), // obtenerLista().get(i).obtenerNombre(),

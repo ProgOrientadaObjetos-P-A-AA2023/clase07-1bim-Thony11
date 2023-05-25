@@ -17,6 +17,10 @@ public class Profesor2 {
         edad = e;
     }
 
+    public Profesor2(String tara_Hernandez, String contratado) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     public void establecerNombre(String n) {
         nombre = n;
     }

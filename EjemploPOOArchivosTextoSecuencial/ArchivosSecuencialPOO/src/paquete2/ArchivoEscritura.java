@@ -12,18 +12,18 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Formatter;
 
-import paquete1.Profesor2;
+import paquete1.Profesor;
 
 public class ArchivoEscritura {
 
     private String nombreArchivo;
     private String rutaArchivo;
-    private Profesor2 registro;
+    private Profesor registro;
     private Formatter salidaArchivo;
 
     public ArchivoEscritura(String n) {
         nombreArchivo = n;
-        rutaArchivo = String.format("data/%s", nombreArchivo); // "data/profesores2.txt"
+        rutaArchivo = String.format("data/%s", nombreArchivo); //"data/profesores2.txt"
         
     }
 
@@ -36,7 +36,7 @@ public class ArchivoEscritura {
                 obtenerNombreArchivo());;
     }
 
-    public void establecerRegistro(Profesor2 n) {
+    public void establecerRegistro(Profesor n) {
         registro = n;
     }
 
@@ -48,7 +48,7 @@ public class ArchivoEscritura {
         return rutaArchivo;
     }
 
-    public Profesor2 obtenerRegistro() {
+    public Profesor obtenerRegistro() {
         return registro;
     }
 
@@ -56,7 +56,7 @@ public class ArchivoEscritura {
     public void establecerSalida() {
         try {
             salidaArchivo = new Formatter(new FileWriter(rutaArchivo, true));
-            Profesor2 p = obtenerRegistro();
+            Profesor p = obtenerRegistro();
             
             String cadenaRegistro = String.format("%s;%s",
                     p.obtenerNombre(), p.obtenerTipo());
